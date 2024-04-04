@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="src/site.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>ATARI BREAKOUT</title>
+</head>
+<body>
+    <div id="app"></div>
+    <div id="currentScore"></div>
+    <button id="pauseButton">Pause</button>
+    <div id="speedToggleConfirm" style="display:none;">Speed Increased OFF</div>
+    <div id="gameMenu" class="menu">
+        <button id="continueButton">Continue</button>
+        <button id="resetButton">Reset</button>
+        <button id="startButton">Start Game</button>
+        <div id="bestResults">
+            <h2>Best Results</h2>
+            <u1 id="resultsList">
+
+            </u1>
+        </div>
+    </div>
+
+    <audio id="kaRikkadNutavad" loop>
+      <source src="audio/kurjam Ka rikkad nutavad.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="death" loop>
+      <source src="audio/male-scream-in-fear-123079-[AudioTrimmer.com].mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="sonofabitch" loop>
+      <source src="audio/Voicy_You son of a b_tch-[AudioTrimmer.com].mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="ballHit" loop>
+      <source src="audio/tennisballbounce-39028-[AudioTrimmer.com].mp3" type="audio/mp3">
+    </audio>
+
+    <script src="src/app.ts" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+html {
+    font-size: 16px;
+    position: relative;
+    min-height: 100%;
+    background-color: cadetblue;
+}
+
+body {
+    font-size: 1rem;
+}
+
+.menu, #pauseButton, #continueButton, #resetButton {
+    z-index: 1000; 
+}
+
+.menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+}
+
+.menu.show {
+    display: block;
+}
+
+button {
+    font-family: 'JetBrains Mono', monospace;
+    background: linear-gradient(to right, #AFDBF5, #89CFF0);
+    color: black;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    padding: 10px 30px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #89CFF0, #AFDBF5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+}
+
+#pauseButton, #continueButton, #resetButton {
+    display: none; /* Hide initially, show with TS */
+}
+
+#pauseButton {
+    /* padding: 0.25rem 0.5rem; 
+    font-size: 0.75rem; 
+    top: 10px;
+    right: 30px; */
+    position: fixed;
+    top: 2vh; 
+    right: 2vw; 
+    padding: 1vh 2vw; 
+    font-size: 1.5vh; 
+}
+
+#currentScore {
+    font-family: 'JetBrains Mono', monospace;
+    color: black;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 1.5rem;
+    position: fixed; 
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 1000; 
+}
+
+#bestResults {
+    font-family: 'JetBrains Mono', monospace;
+    display: none;
+    text-align: center;
+}
+
+#continueButton {
+    position: absolute;
+    top: -60px;
+    right: 80px;
+}
+
+#resetButton {
+    position: absolute;
+    top: -60px;
+    left: 80px;
+} 
+
+ @media (max-width: 768px) {
+    #currentScore {
+        font-size: 1.2rem;
+    }
+    #continueButton, #resetButton {
+        margin: 0 10px; 
+    }
+    button {
+        padding: 0.5rem 1rem; 
+        font-size: 0.9rem; 
+    }
+    #speedToggleConfirm {
+        font-size: 1.2vh; 
+        padding: 0.5vh 1vw; 
+    }
+}
+
+@media (min-width: 1024px) {
+    #currentScore {
+        font-size: 1.5rem;
+    }
+    button {
+        padding: 10px 30px;
+        font-size: 1.1rem; 
+    }
+}
+
+#speedToggleConfirm {
+    position: fixed; /* to stay responsive relative to viewport */
+    bottom: 2vh; 
+    right: 2vw; 
+    padding: 1vh 2vw; 
+    font-size: 1.5vh; 
+    color: black;
+    background: linear-gradient(to right, #AFDBF5, #89CFF0);
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    margin: 10px; 
+    cursor: pointer; 
+    display: none; 
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    z-index: 1000; 
+    font-family: 'JetBrains Mono', monospace; 
+}
